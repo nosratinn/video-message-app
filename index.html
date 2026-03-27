@@ -8,26 +8,18 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    background: #0b0b0d;
+    background: #0f0f10;
     color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-    -webkit-text-size-adjust: 100%;
+    font-family: Arial, sans-serif;
+    height: 100%;
 }
 body {
     text-align: center;
 }
-* {
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
 .wrap {
-    max-width: 560px;
+    max-width: 480px;
     margin: 0 auto;
-    min-height: 100%;
-    padding: 24px 18px 36px;
-    display: block;
+    padding: 20px;
 }
 .screen {
     display: none;
@@ -35,199 +27,89 @@ body {
 .screen.active {
     display: block;
 }
-.card {
-    background: #16161a;
-    border: 1px solid #2a2a30;
-    border-radius: 18px;
-    padding: 28px 18px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+h1, h2 {
+    margin: 16px 0;
 }
-.brand {
-    width: 64px;
-    height: 64px;
-    margin: 4px auto 18px;
-    border-radius: 16px;
-    background: #ff453a;
-    display: block;
-    position: relative;
-    box-shadow: 0 10px 24px rgba(255,69,58,0.25);
+.msg {
+    margin: 14px 0;
+    font-size: 18px;
+    color: #ff7070;
+    min-height: 24px;
 }
-.brand:before,
-.brand:after {
-    content: "";
-    position: absolute;
-    background: #ffffff;
-    border-radius: 3px;
-}
-.brand:before {
-    width: 24px;
-    height: 18px;
-    left: 18px;
-    top: 23px;
-}
-.brand:after {
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 12px solid #16161a;
-    background: transparent;
-    left: 28px;
-    top: 24px;
-}
-h1 {
-    margin: 0 0 10px;
-    font-size: 34px;
-    line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-h2 {
-    margin: 0 0 10px;
+.btn {
+    display: inline-block;
+    width: 220px;
+    min-height: 64px;
+    line-height: 64px;
+    margin: 12px auto;
     font-size: 28px;
-    line-height: 1.15;
-    font-weight: 700;
+    font-weight: bold;
+    border-radius: 14px;
+    border: none;
+    background: #ff3b30;
+    color: #fff;
+}
+.btn.secondary {
+    background: #33383f;
+}
+.timer {
+    font-size: 92px;
+    font-weight: bold;
+    margin: 30px 0;
+    color: #ffd54a;
 }
 .sub {
     font-size: 22px;
-    line-height: 1.35;
-    color: #e6e6eb;
-    margin: 0 0 22px;
-}
-.helper {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #b9bac2;
-    margin: 14px auto 0;
-    max-width: 28em;
-}
-.pin-box {
-    display: block;
-    width: 190px;
-    margin: 14px auto 0;
-    text-align: center;
-    font-size: 42px;
-    line-height: 1;
-    padding: 16px 12px;
-    border-radius: 14px;
-    border: 2px solid #40404a;
-    background: #0f1014;
-    color: #fff;
-    outline: none;
-}
-.pin-box:focus {
-    border-color: #ff453a;
-}
-.msg {
-    min-height: 24px;
-    margin: 14px 0 0;
-    font-size: 18px;
-    color: #ff8d87;
-}
-.btn {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 14px auto 0;
-    min-height: 68px;
-    padding: 0 18px;
-    border: 0;
-    border-radius: 16px;
-    font-size: 28px;
-    line-height: 68px;
-    font-weight: 700;
-    color: #ffffff;
-    background: #ff453a;
-    box-shadow: 0 12px 24px rgba(255,69,58,0.24);
-}
-.btn.secondary {
-    background: #2b2d33;
-    box-shadow: none;
-}
-.btn:active {
-    opacity: 0.92;
-}
-.timer {
-    font-size: 108px;
-    line-height: 1;
-    font-weight: 700;
-    color: #ffd54d;
-    margin: 10px 0 18px;
-    letter-spacing: -0.04em;
-}
-.record-shell {
-    background: #121216;
-    border: 1px solid #27272d;
-    border-radius: 18px;
-    padding: 16px;
+    color: #d5d5d5;
 }
 video {
     display: block;
     width: 100%;
-    max-width: 100%;
+    max-width: 420px;
+    height: auto;
     background: #000;
-    border-radius: 14px;
-    margin: 0 auto 14px;
+    border-radius: 12px;
+    margin: 16px auto;
 }
-.record-time {
-    font-size: 24px;
-    line-height: 1.3;
-    color: #ffe082;
-    margin-bottom: 8px;
-}
-.review-actions {
-    margin-top: 6px;
+.note {
+    font-size: 15px;
+    color: #bdbdbd;
+    line-height: 1.4;
+    margin-top: 12px;
 }
 .hidden-input {
     position: absolute;
     left: -9999px;
-}
-@media screen and (min-width: 700px) {
-    .wrap {
-        padding-top: 42px;
-    }
 }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-    <div id="pinScreen" class="screen active">
-        <div class="card">
-            <span class="brand" aria-hidden="true"></span>
-            <h1>Enter PIN</h1>
-            <p class="sub">Private video booth</p>
-            <input id="pinInput" class="pin-box" type="password" inputmode="numeric" maxlength="4" autocomplete="off">
-            <div id="pinMsg" class="msg"></div>
-        </div>
-    </div>
-
-    <div id="mainScreen" class="screen">
-        <div class="card">
-            <span class="brand" aria-hidden="true"></span>
-            <h1>Video Message</h1>
-            <p class="sub">Record up to a minute long message</p>
-            <button id="startBtn" class="btn">START</button>
-        </div>
+    <div id="mainScreen" class="screen active">
+        <h1>Record up to a minute long message</h1>
+        <div class="sub">Dark party mode</div>
+        <button id="startBtn" class="btn">START</button>
+        <div class="note">On older iPads, recording opens the built-in camera after the countdown.</div>
     </div>
 
     <div id="countdownScreen" class="screen">
-        <div class="card">
-            <div id="countdownNum" class="timer">10</div>
-            <p class="sub">Get ready</p>
-        </div>
+        <div id="countdownNum" class="timer">10</div>
+        <div class="sub">Get ready</div>
+    </div>
+
+    <div id="recordScreen" class="screen">
+        <video id="preview" autoplay muted playsinline></video>
+        <div id="recordTimer" class="sub">00:00 / 01:00</div>
+        <button id="finishBtn" class="btn secondary">FINISH</button>
     </div>
 
     <div id="reviewScreen" class="screen">
-        <div class="card">
-            <h2>Your message</h2>
-            <video id="reviewVideo" controls playsinline webkit-playsinline></video>
-            <div class="review-actions">
-                <button id="saveBtn" class="btn">Save Message!</button>
-                <button id="redoBtn" class="btn secondary">Redo the video</button>
-            </div>
-            <div id="saveMsg" class="msg"></div>
-        </div>
+        <h2>Review</h2>
+        <video id="reviewVideo" controls playsinline></video>
+        <button id="saveBtn" class="btn">Save Message!</button>
+        <button id="discardBtn" class="btn secondary">Redo the video</button>
+        <div id="saveMsg" class="msg"></div>
     </div>
 
     <input id="nativeCapture" class="hidden-input" type="file" accept="video/*" capture="user">
@@ -236,210 +118,30 @@ video {
 
 <script>
 (function () {
-    var PIN = '0411';
-    var PIN_KEY = 'video_pin_ok';
+    var stream = null;
+    var mediaRecorder = null;
+    var chunks = [];
     var finalBlob = null;
     var finalUrl = '';
+    var recordStart = 0;
+    var recordTimer = null;
+    var maxSeconds = 60;
+    var selectedMimeType = '';
+    var usingNativeFallback = false;
 
     var screens = {
-        pin: document.getElementById('pinScreen'),
         main: document.getElementById('mainScreen'),
         countdown: document.getElementById('countdownScreen'),
+        record: document.getElementById('recordScreen'),
         review: document.getElementById('reviewScreen')
     };
 
-    var pinInput = document.getElementById('pinInput');
-    var pinMsg = document.getElementById('pinMsg');
     var startBtn = document.getElementById('startBtn');
+    var finishBtn = document.getElementById('finishBtn');
     var saveBtn = document.getElementById('saveBtn');
-    var redoBtn = document.getElementById('redoBtn');
+    var discardBtn = document.getElementById('discardBtn');
     var countdownNum = document.getElementById('countdownNum');
+    var preview = document.getElementById('preview');
     var reviewVideo = document.getElementById('reviewVideo');
-    var saveMsg = document.getElementById('saveMsg');
-    var nativeCapture = document.getElementById('nativeCapture');
-
-    function showScreen(name) {
-        var key;
-        for (key in screens) {
-            if (screens.hasOwnProperty(key)) {
-                screens[key].className = 'screen';
-            }
-        }
-        screens[name].className = 'screen active';
-    }
-
-    function storageGet(key) {
-        try {
-            return window.localStorage.getItem(key);
-        } catch (e) {
-            return null;
-        }
-    }
-
-    function storageSet(key, value) {
-        try {
-            window.localStorage.setItem(key, value);
-        } catch (e) {}
-    }
-
-    function beep() {
-        var Ctx = window.AudioContext || window.webkitAudioContext;
-        var ctx, osc, gain;
-        if (!Ctx) {
-            return;
-        }
-        try {
-            ctx = new Ctx();
-            osc = ctx.createOscillator();
-            gain = ctx.createGain();
-            osc.type = 'sine';
-            osc.frequency.value = 880;
-            gain.gain.value = 0.15;
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-            osc.start(0);
-            osc.stop(ctx.currentTime + 0.14);
-        } catch (e) {}
-    }
-
-    function resetMedia() {
-        if (finalUrl) {
-            try {
-                window.URL.revokeObjectURL(finalUrl);
-            } catch (e) {}
-        }
-        finalBlob = null;
-        finalUrl = '';
-        reviewVideo.removeAttribute('src');
-        reviewVideo.load();
-        saveMsg.innerHTML = '';
-    }
-
-    function fileName() {
-        var d = new Date();
-        function pad(n) {
-            return n < 10 ? '0' + n : '' + n;
-        }
-        return 'video-message-' +
-            d.getFullYear() +
-            pad(d.getMonth() + 1) +
-            pad(d.getDate()) + '-' +
-            pad(d.getHours()) +
-            pad(d.getMinutes()) +
-            pad(d.getSeconds());
-    }
-
-    function extensionFromType(type) {
-        if (!type) {
-            return 'mov';
-        }
-        if (type.indexOf('mp4') !== -1) {
-            return 'mp4';
-        }
-        if (type.indexOf('quicktime') !== -1) {
-            return 'mov';
-        }
-        if (type.indexOf('3gpp') !== -1) {
-            return '3gp';
-        }
-        return 'mov';
-    }
-
-    function saveBlob(blob) {
-        var a, ext;
-        if (!blob || !blob.size) {
-            saveMsg.innerHTML = 'That file is empty. Please redo the video.';
-            return;
-        }
-        ext = extensionFromType(blob.type);
-        a = document.createElement('a');
-        a.href = window.URL.createObjectURL(blob);
-        a.download = fileName() + '.' + ext;
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function () {
-            try {
-                window.URL.revokeObjectURL(a.href);
-            } catch (e) {}
-            if (a.parentNode) {
-                a.parentNode.removeChild(a);
-            }
-        }, 1200);
-        saveMsg.innerHTML = 'Saved.';
-    }
-
-    function startCountdown() {
-        var count = 10;
-        saveMsg.innerHTML = '';
-        showScreen('countdown');
-        countdownNum.innerHTML = '' + count;
-        beep();
-        var interval = setInterval(function () {
-            count = count - 1;
-            if (count > 0) {
-                countdownNum.innerHTML = '' + count;
-                beep();
-            } else {
-                clearInterval(interval);
-                nativeCapture.click();
-            }
-        }, 1000);
-    }
-
-    pinInput.onkeyup = function () {
-        if (pinInput.value.length === 4) {
-            if (pinInput.value === PIN) {
-                storageSet(PIN_KEY, '1');
-                pinInput.value = '';
-                pinMsg.innerHTML = '';
-                showScreen('main');
-            } else {
-                pinMsg.innerHTML = 'Incorrect PIN';
-                pinInput.value = '';
-            }
-        }
-    };
-
-    startBtn.onclick = function () {
-        resetMedia();
-        startCountdown();
-    };
-
-    saveBtn.onclick = function () {
-        saveBlob(finalBlob);
-    };
-
-    redoBtn.onclick = function () {
-        resetMedia();
-        showScreen('main');
-    };
-
-    nativeCapture.onchange = function (evt) {
-        var file = evt.target.files && evt.target.files[0] ? evt.target.files[0] : null;
-        if (!file) {
-            showScreen('main');
-            return;
-        }
-        resetMedia();
-        finalBlob = file;
-        finalUrl = window.URL.createObjectURL(file);
-        reviewVideo.src = finalUrl;
-        reviewVideo.load();
-        showScreen('review');
-        nativeCapture.value = '';
-    };
-
-    if (storageGet(PIN_KEY) === '1') {
-        showScreen('main');
-    } else {
-        showScreen('pin');
-        setTimeout(function () {
-            try {
-                pinInput.focus();
-            } catch (e) {}
-        }, 300);
-    }
-})();
-</script>
-</body>
-</html>
+    var recordTimerLabel = document.getElementById('recordTimer');
+    var saveMsg = 
