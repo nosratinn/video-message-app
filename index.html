@@ -14,14 +14,26 @@
     #overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1; }
     .screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 40px; }
     .screen.active { display: flex; }
+    
+    /* PIN SCREEN STYLES */
+    #pin-screen .emoji { font-size: 80px; margin-bottom: 20px; }
+    #pin-screen h1 { font-size: 50px; font-weight: 800; text-align: center; margin-bottom: 10px; }
+    #pin-screen p { font-size: 24px; opacity: 0.8; margin-bottom: 40px; text-align: center; }
+    #pin-input { font-size: 44px; font-weight: 700; width: 220px; text-align: center; padding: 15px; border-radius: 20px; border: 3px solid rgba(255,255,255,0.3); background: rgba(0,0,0,0.5); color: white; letter-spacing: 10px; outline: none; transition: border-color 0.3s; margin-bottom: 10px; }
+    #pin-input:focus { border-color: #22c55e; }
+    #pin-input::placeholder { color: rgba(255,255,255,0.2); letter-spacing: normal; font-size: 34px; }
+    
     #welcome-screen .emoji { font-size: 90px; margin-bottom: 20px; }
     #welcome-screen h1 { font-size: 58px; font-weight: 800; text-align: center; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); margin-bottom: 16px; line-height: 1.2; }
     #welcome-screen p { font-size: 28px; opacity: 0.85; text-align: center; margin-bottom: 60px; }
+    
     .btn-start { background: linear-gradient(135deg, #22c55e, #16a34a); color: white; font-size: 48px; font-weight: 900; width: 300px; height: 120px; border: none; border-radius: 28px; cursor: pointer; box-shadow: 0 8px 30px rgba(34,197,94,0.5); letter-spacing: 2px; }
     .btn-start:active { transform: scale(0.97); }
+    
     #countdown-screen h2 { font-size: 42px; font-weight: 600; opacity: 0.85; margin-bottom: 10px; }
     #countdown-number { font-size: 240px; font-weight: 900; line-height: 1; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
     #countdown-screen p { font-size: 22px; opacity: 0.7; margin-top: 20px; text-align: center; }
+    
     #recording-screen { justify-content: space-between; padding: 30px 30px 50px 30px; }
     .rec-top-bar { width: 100%; display: flex; justify-content: space-between; align-items: center; }
     .rec-indicator { display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.6); padding: 12px 20px; border-radius: 14px; }
@@ -29,12 +41,15 @@
     .rec-dot.blink { opacity: 0.15; }
     .rec-label { font-size: 24px; font-weight: 700; color: red; }
     .rec-timer { font-size: 40px; font-weight: 700; font-variant-numeric: tabular-nums; background: rgba(0,0,0,0.6); padding: 12px 22px; border-radius: 14px; }
+    
     #warning-box { display: none; flex-direction: column; align-items: center; gap: 10px; background: rgba(0,0,0,0.75); border: 2px solid #facc15; border-radius: 20px; padding: 24px 40px; }
     #warning-box.visible { display: flex; }
     #warning-box .warn-title { font-size: 34px; font-weight: 700; color: #facc15; }
     #warning-box .warn-seconds { font-size: 28px; font-weight: 600; color: white; }
+    
     .btn-finish { background: linear-gradient(135deg, #ef4444, #f97316); color: white; font-size: 42px; font-weight: 900; width: 280px; height: 110px; border: none; border-radius: 24px; cursor: pointer; box-shadow: 0 8px 30px rgba(239,68,68,0.5); letter-spacing: 2px; }
     .btn-finish:active { transform: scale(0.97); }
+    
     #review-screen { background: rgba(0,0,0,0.7); }
     #review-screen h2 { font-size: 54px; font-weight: 800; margin-bottom: 20px; }
     #review-screen p { font-size: 30px; text-align: center; opacity: 0.9; line-height: 1.5; margin-bottom: 50px; }
@@ -45,15 +60,18 @@
     .btn-yes:active, .btn-no:active { transform: scale(0.97); }
     .btn-yes .btn-emoji, .btn-no .btn-emoji { font-size: 46px; }
     .btn-yes .btn-text, .btn-no .btn-text { font-size: 22px; font-weight: 700; color: white; text-align: center; line-height: 1.3; }
+    
     #uploading-screen { background: rgba(0,0,0,0.75); }
     .spinner { width: 80px; height: 80px; border: 6px solid rgba(255,255,255,0.2); border-top-color: #fff; border-radius: 50%; animation: spin 0.9s linear infinite; margin-bottom: 30px; }
     @keyframes spin { to { transform: rotate(360deg); } }
     #uploading-screen h2 { font-size: 36px; font-weight: 600; text-align: center; }
     #uploading-screen p { font-size: 22px; opacity: 0.7; margin-top: 12px; }
+    
     #thankyou-screen { background: rgba(0,0,0,0.75); }
     #thankyou-screen .big-emoji { font-size: 100px; margin-bottom: 20px; }
     #thankyou-screen h2 { font-size: 58px; font-weight: 800; text-align: center; margin-bottom: 16px; }
     #thankyou-screen p { font-size: 26px; opacity: 0.85; text-align: center; }
+    
     #error-screen { background: rgba(0,0,0,0.8); }
     #error-screen .big-emoji { font-size: 80px; margin-bottom: 20px; }
     #error-screen h2 { font-size: 40px; font-weight: 700; text-align: center; margin-bottom: 14px; color: #fca5a5; }
@@ -66,8 +84,19 @@
   <video id="camera-feed" autoplay muted playsinline></video>
   <div id="overlay"></div>
 
+  <!-- PIN SCREEN -->
+  <div class="screen" id="pin-screen">
+    <div class="emoji">🔒</div>
+    <h1>Private Event</h1>
+    <p>Please enter the party PIN</p>
+    <!-- inputmode="numeric" brings up the number pad on mobile automatically! -->
+    <input type="password" id="pin-input" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="••••" />
+    <p id="pin-error" style="color: #ef4444; font-size: 22px; font-weight: 600; margin-top: 10px; opacity: 0; transition: opacity 0.3s;">Incorrect PIN</p>
+    <button class="btn-start" style="margin-top: 20px; font-size: 40px;" onclick="checkPin()">ENTER</button>
+  </div>
+
   <!-- WELCOME -->
-  <div class="screen active" id="welcome-screen">
+  <div class="screen" id="welcome-screen">
     <div class="emoji">🎉</div>
     <h1>Leave Us a<br>Video Message!</h1>
     <p>Press START and say hello!</p>
@@ -137,6 +166,7 @@
 
   <script>
     const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyvAd_y2m5bcGJ_vbC2o0NmTThlJgQ_nB0zJPKwID49JH2mrQ2E1LT1j-oylCCoK7u6Lw/exec";
+    const PARTY_PIN = "0411"; // The master PIN
 
     let mediaRecorder = null;
     let recordedChunks = [];
@@ -148,14 +178,43 @@
     let isRecording = false;
     let currentMimeType = "";
 
+    // ============================================
+    // STARTUP / PIN VERIFICATION
+    // ============================================
     window.addEventListener("load", () => {
-      startCamera();
+      // Check if they have already unlocked it in the past
+      if (localStorage.getItem("party_unlocked") === "true") {
+        startCamera();
+        showScreen("welcome-screen");
+      } else {
+        // Show PIN screen first
+        showScreen("pin-screen");
+      }
     });
+
+    function checkPin() {
+      const input = document.getElementById("pin-input").value;
+      const errorText = document.getElementById("pin-error");
+
+      if (input === PARTY_PIN) {
+        // Correct! Save to local storage so they don't have to enter it again
+        localStorage.setItem("party_unlocked", "true");
+        // Start the camera now that they are verified
+        startCamera();
+        showScreen("welcome-screen");
+      } else {
+        // Incorrect
+        errorText.style.opacity = "1";
+        setTimeout(() => {
+          errorText.style.opacity = "0";
+        }, 3000);
+        document.getElementById("pin-input").value = "";
+      }
+    }
 
     async function startCamera() {
       try {
         videoStream = await navigator.mediaDevices.getUserMedia({
-          // Restored to the safe constraints that didn't bloat the iPhone
           video: { facingMode: "user", width: { ideal: 1280 }, height: { ideal: 720 } },
           audio: { echoCancellation: true, noiseSuppression: true }
         });
@@ -171,6 +230,9 @@
       document.getElementById(screenId).classList.add("active");
     }
 
+    // ============================================
+    // RECORDING LOGIC
+    // ============================================
     function startCountdown() {
       showScreen("countdown-screen");
       let count = 10;
@@ -200,12 +262,9 @@
       document.getElementById("warn-seconds").textContent = "10 seconds remaining";
       document.getElementById("rec-timer").textContent = "0:00";
 
-      // 🔴 THE NEW FIX: Request a highly compressed 1.5 Mbps Bitrate 
-      // This forces the final file size to be small without causing the 7-byte crash
       try {
         mediaRecorder = new MediaRecorder(videoStream, { videoBitsPerSecond: 1500000 });
       } catch (e) {
-        // Safe fallback if a specific browser rejects the bitrate rule
         mediaRecorder = new MediaRecorder(videoStream);
       }
       
@@ -270,6 +329,9 @@
       resetToWelcome();
     }
 
+    // ============================================
+    // UPLOADING
+    // ============================================
     async function uploadToGoogleDrive() {
       try {
         const finalType = currentMimeType;
@@ -281,7 +343,6 @@
         const base64 = await blobToBase64(blob);
         const base64Data = base64.split(",")[1];
 
-        // Using 3MB chunks. A 60-second video at 1.5 Mbps should only be 4 or 5 chunks total now!
         const CHUNK_SIZE = 3 * 1024 * 1024; 
         const totalChunks = Math.ceil(base64Data.length / CHUNK_SIZE);
         const sessionId = Date.now() + "_" + Math.random().toString(36).substr(2, 9);
